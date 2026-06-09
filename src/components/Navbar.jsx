@@ -38,7 +38,7 @@ export default function Navbar() {
                 {/* LOGO */}
                 <Link href="/" className="flex items-center gap-3">
                     <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-linear-to-br from-violet-600 to-fuchsia-500 shadow-lg">
-                        <span className="text-xl font-bold text-white">P</span>
+                        <span className="text-xl font-bold text-white">HP</span>
                     </div>
 
                     <div className="hidden leading-none sm:block">
@@ -86,14 +86,17 @@ export default function Navbar() {
                                         Sign In
                                     </Link>}
 
-                            <Button
-                                as={Link}
-                                href="/register"
-                                radius="lg"
-                                className="h-11 bg-white px-6 text-sm font-semibold text-black hover:bg-gray-200"
+                            <Link
+                            href={"/auth/signup"}
                             >
-                                Get Started
-                            </Button>
+                                
+                                <Button
+                                    radius="lg"
+                                    className="h-11 bg-white px-6 text-sm font-semibold text-black hover:bg-gray-200"
+                                >
+                                    Get Started
+                                </Button>
+                            </Link>
                         </div>
                     </div>
 
@@ -168,14 +171,17 @@ export default function Navbar() {
                                     Sign In
                                 </Link>
 
-                                <Button
-                                    as={Link}
-                                    href="/register"
-                                    className="bg-white font-semibold text-black"
-                                    radius="lg"
+                                <Link
+                                href={'/auth/signup'}
                                 >
-                                    Get Started
-                                </Button>
+                                    <Button
+                                        className="bg-white font-semibold text-black"
+                                        radius="lg"
+                                    >
+                                        Get Started
+                                    </Button>
+                                </Link>
+                                
                             </div>
                         </div>
                     </div>
