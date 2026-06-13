@@ -32,6 +32,21 @@ export default function Navbar() {
         },
     ];
 
+    const dashboardLinks = {
+        seeker: '/dashboard/seeker',
+        recruiter: '/dashboard/recruiter',
+        admin: '/dashboard/admin'
+    }
+
+    if (user?.email) {
+        navLinks.push(
+            {
+                label: 'Dashboard',
+                href: dashboardLinks[user?.role || 'seeker']
+            }
+        )
+    }
+
     return (
         <nav className="sticky top-0 z-50 border-b border-white/10 bg-[#0B0B0F]/80 backdrop-blur-xl">
             <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
@@ -87,9 +102,9 @@ export default function Navbar() {
                                     </Link>}
 
                             <Link
-                            href={"/auth/signup"}
+                                href={"/auth/signup"}
                             >
-                                
+
                                 <Button
                                     radius="lg"
                                     className="h-11 bg-white px-6 text-sm font-semibold text-black hover:bg-gray-200"
@@ -172,7 +187,7 @@ export default function Navbar() {
                                 </Link>
 
                                 <Link
-                                href={'/auth/signup'}
+                                    href={'/auth/signup'}
                                 >
                                     <Button
                                         className="bg-white font-semibold text-black"
@@ -181,7 +196,7 @@ export default function Navbar() {
                                         Get Started
                                     </Button>
                                 </Link>
-                                
+
                             </div>
                         </div>
                     </div>
