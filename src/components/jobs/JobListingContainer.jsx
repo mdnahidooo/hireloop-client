@@ -148,7 +148,7 @@ export default function JobListingContainer({ jobs, filters, total }) {
                 </>
             ) : (
                 <div className="text-center py-20 border border-dashed border-zinc-800 rounded-[32px] max-w-7xl mx-auto">
-                    <p className="text-zinc-500 text-lg">No positions match your search criteria. Try again.</p>
+                    <p className="text-zinc-500 text-lg">No positions match your search criteria.</p>
                 </div>
             )}
         </>
